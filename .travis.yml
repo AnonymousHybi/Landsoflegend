@@ -21,7 +21,7 @@ before_script:
 
 before_install:
   - unset _JAVA_OPTIONS
-
+  - chmod +x test/run-test.sh
 addons:
   apt:
     packages:
