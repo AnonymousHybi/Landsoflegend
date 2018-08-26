@@ -200,6 +200,7 @@ function run_code_tests {
     pip install --user PyYaml -q
     pip install --user beautifulsoup4 -q
     shopt -s globstar
+    chmod +x test/indentation.awk
     run_test "code quality checks" "test/check-paths.sh"
     run_test "indentation check" "awk -f test/indentation.awk **/*.dm"
 #    run_test "check tags" "python2 test/TagMatcher/tag-matcher.py ." #Disabled cause there's too many errors to even cope with
